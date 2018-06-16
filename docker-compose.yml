@@ -14,6 +14,8 @@ services:
       - ${NGINX_FILES_PATH}/vhost.d:/etc/nginx/vhost.d
       - ${NGINX_FILES_PATH}/html:/usr/share/nginx/html
     restart: always
+    labels:
+      - "com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy"
 
   letsencrypt:
     image: jrcs/letsencrypt-nginx-proxy-companion
