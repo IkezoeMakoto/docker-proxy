@@ -12,6 +12,7 @@ services:
       - ${NGINX_FILES_PATH}/certs:/etc/nginx/certs:ro
       - ${NGINX_FILES_PATH}/conf.d:/etc/nginx/conf.d
       - ${NGINX_FILES_PATH}/vhost.d:/etc/nginx/vhost.d
+      - ${NGINX_FILES_PATH}/nginx.conf:/etc/nginx/nginx.conf
       - ${NGINX_FILES_PATH}/html:/usr/share/nginx/html
     restart: always
     labels:
